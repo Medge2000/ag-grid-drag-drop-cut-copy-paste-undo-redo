@@ -3,7 +3,7 @@ import React from "react";
 export default function WebpageOverview() {
   return (
     <div className="flex flex-col gap-12 max-h-screen py-24 px-[25%] overflow-y-auto">
-      <h1 className="text-3xl font-bold">Webpage Overview</h1>
+      <h1 className="text-3xl font-bold">Overview: AG-Grid Drag / Drop / Cut / Copy / Paste / Undo / Redo</h1>
 
       <div className="flex flex-col gap-2">
         <h2 className="text-xl font-bold">The Grid (AG-Grid Integration)</h2>
