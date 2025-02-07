@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "./ThemeContext";
 import { LicenseManager } from "ag-grid-enterprise";
 
-LicenseManager.setLicenseKey(process.env.NEXT_PUBLIC_PROCORE_AG_GRID_LICENSE || "");
+LicenseManager.setLicenseKey(process.env.NEXT_AG_GRID_LICENSE || "");
 
 // Add this script to prevent theme flash
 const themeScript = `
