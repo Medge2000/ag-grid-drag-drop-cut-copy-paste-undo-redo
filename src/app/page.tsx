@@ -164,8 +164,10 @@ export default function AgGridDragDrop() {
       id: "filedownload",
       onClick: () => {
         const link = document.createElement("a");
-        link.href = "https://saetmoportfolio.blob.core.windows.net/bs-etmoportfolio/ag-grid-drag-drop-njs.zip";
-        link.download = "https://saetmoportfolio.blob.core.windows.net/bs-etmoportfolio/ag-grid-drag-drop-njs.zip"; // Name for the downloaded file
+        link.href =
+          "https://github.com/Medge2000/ag-grid-drag-drop-cut-copy-paste-undo-redo/archive/refs/heads/master.zip";
+        link.download =
+          "https://github.com/Medge2000/ag-grid-drag-drop-cut-copy-paste-undo-redo/archive/refs/heads/master.zip"; // Name for the downloaded file
         document.body.appendChild(link); // Append to document
         link.click();
         document.body.removeChild(link); // Clean up
