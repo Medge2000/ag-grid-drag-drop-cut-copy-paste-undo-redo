@@ -3,19 +3,106 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 0, 0, 0;
+  --lightblue: theme("colors.cerulean.125");
+  --etmomain: theme("colors.cerulean.600");
+  --scrollbar-track: theme("colors.gray.100");
+  --scrollbar-thumb: theme("colors.cerulean.200");
+  --scrollbar-border: theme("colors.gray.200");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[class="dark"] {
+  --background-default: theme("colors.green.900");
+  --foreground-rgb: 255, 255, 255;
+  --scrollbar-track: theme("colors.gray.900");
+  --scrollbar-thumb: theme("colors.cerulean.600");
+  --scrollbar-border: theme("colors.gray.600");
+}
+.text-default {
+  color: theme("colors.cerulean.700"); /* cerulean-700 */
+}
+[class="dark"] .text-default {
+  color: theme("colors.white");
+}
+
+.hover\:text-default:hover {
+  color: theme("colors.cerulean.600"); /* cerulean-500 */
+}
+[class="dark"] .hover\:text-default:hover {
+  color: theme("colors.cerulean.200"); /* cerulean-200 */
+}
+
+.bg-default {
+  background-color: theme("colors.white");
+}
+[class="dark"] .bg-default {
+  background-color: theme("colors.green.900"); /* gray-800 */
+}
+
+.hover\:bg-default:hover {
+  background-color: theme("colors.cerulean.200"); /* cerulean-200 */
+}
+[class="dark"] .hover\:bg-default:hover {
+  background-color: theme("colors.gray.700"); /* gray-700 */
+}
+
+.border-default {
+  border-color: theme("colors.cerulean.300"); /* cerulean-300 */
+}
+[class="dark"] .border-default {
+  border-color: theme("colors.gray.700"); /* gray-700 */
+}
+
+.hover\:border-default:hover {
+  border-color: theme("colors.cerulean.400"); /* cerulean-400 */
+}
+[class="dark"] .hover\:border-default:hover {
+  border-color: theme("colors.gray.600"); /* gray-600 */
+}
+
+.text-default-size {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-default));
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
+}
+
+/* Add smooth transitions for theme changes */
+/* * {
+  transition-property: color, background-color, border-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+} */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Define the scrollbar dimensions */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  box-shadow: inset 1px 0 var(--scrollbar-border); /* Border effect for the track */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb); /* Border effect for the thumb */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera when needed */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

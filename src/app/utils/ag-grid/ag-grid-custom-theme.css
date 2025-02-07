@@ -1,0 +1,62 @@
+.ag-theme-alpine {
+  --ag-font-size: 12px;
+}
+
+.ag-theme-custom-foundation {
+  --ag-font-size: 12px;
+  --ag-border-radius: 5px;
+  --ag-cell-horizontal-padding: 10px;
+  --ag-row-height: 25px;
+  --ag-header-height: 30px;
+  --ag-row-group-indent-size: 20px;
+}
+
+.ag-theme-custom-dark {
+  /* Background */
+  --ag-background-color: theme("colors.gray.900");
+  --ag-odd-row-background-color: theme("colors.gray.900");
+  --ag-row-hover-color: theme("colors.cerulean.600");
+  --ag-selected-row-background-color: theme("colors.cerulean.600");
+  --ag-group-background-color: theme("colors.gray.800");
+
+  /* Foreground */
+  --ag-group-foreground-color: theme("colors.cerulean.400");
+  --ag-item-foreground-color: theme("colors.green.500");
+  --ag-foreground-color: theme("colors.cerulean.150");
+
+  /* Header */
+  --ag-header-background-color: theme("colors.gray.700");
+  --ag-header-foreground-color: theme("colors.white");
+
+  /* Border */
+  --ag-border-color: theme("colors.gray.600");
+  --ag-row-border-color: theme("colors.gray.600");
+
+  /* Control Panel */
+  --ag-control-panel-background-color: theme("colors.gray.900");
+}
+
+.ag-theme-custom-light {
+  /* Background */
+  /* --ag-background-color: theme("colors.gray.100"); */
+  --ag-odd-row-background-color: theme("colors.gray.100");
+  --ag-row-hover-color: theme("colors.cerulean.100");
+  --ag-selected-row-background-color: theme("colors.cerulean.200");
+  --ag-group-background-color: theme("colors.gray.100");
+
+  /* Foreground */
+  --ag-group-foreground-color: theme("colors.cerulean.500");
+  --ag-item-foreground-color: theme("colors.green.600");
+  /* --ag-foreground-color: theme("colors.cerulean.150"); */
+
+  /* Header */
+  --ag-header-background-color: theme("colors.gray.200");
+  --ag-header-foreground-color: theme("colors.cerulean.500");
+
+  /* Border */
+  /* --ag-border-color: theme("colors.gray.600");
+  --ag-row-border-color: theme("colors.gray.600"); */
+
+  /* Control Panel */
+  /* --ag-control-panel-background-color: theme("colors.gray.900"); */
+}

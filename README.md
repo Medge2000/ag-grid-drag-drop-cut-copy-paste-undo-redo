@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AG Grid Enhanced Data Management
+
+This project demonstrates an enhanced implementation of AG-Grid with additional features for improved data manipulation and user experience.
+
+## Features
+
+### Drag and Drop
+
+- Drag external data directly into the grid
+- Drop data into specific groups or nested subgroups
+- Data automatically adapts to the target hierarchical structure
+
+### Enhanced In-Grid Dragging
+
+- Extends AG-Grid's native drag functionality
+- Move rows between different groups
+- Drag items to top level
+- Maintains all subgroups and leaf items during moves
+
+### Cut, Copy, and Paste
+
+- Full support for keyboard shortcuts:
+  - Cut: Ctrl/Cmd + X
+  - Copy: Ctrl/Cmd + C
+  - Paste: Ctrl/Cmd + V
+- Preserves hierarchical structure during operations
+- Intelligently handles paste location context
+
+### Delete Operations
+
+- Remove any selected row with delete button
+- Cascading deletion for groups:
+  - Removes selected group
+  - Automatically removes all subgroups
+  - Removes all associated leaf items
+
+### Undo/Redo Functionality
+
+- Undo any grid manipulation action
+- Redo previously undone actions
+- Clear redo stack on new actions for logical consistency
+
+## Technical Details
+
+This application is built with:
+
+- Next.js 15
+- AG-Grid Enterprise
+- React 19
+- TypeScript
+- TailwindCSS
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, either run the development server or build the project, then start the server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm run build
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Then, open the browser and navigate to `http://localhost:3000` to view the project.
