@@ -184,13 +184,13 @@ export default function AgGridDragDrop() {
       <div className="absolute top-0 right-0 z-50 pr-4 pt-4">
         <button
           onClick={toggleTheme}
-          className="p-2 rounded-lg hover:bg-cerulean-600 dark:hover:bg-gray-700 transition-colors duration-200"
+          className="p-2 rounded-lg hover:bg-cerulean-200 text-cerulean-600 dark:text-cerulean-400 dark:hover:bg-gray-700 transition-colors duration-200"
           aria-label="Toggle theme"
         >
           {theme === "light" ? (
-            <IconComponent type="moon" className="w-6 h-6 text-red-200" />
+            <IconComponent type="moon" className="w-8 h-8" />
           ) : (
-            <IconComponent type="sun" className="w-6 h-6 text-red-200" />
+            <IconComponent type="sun" className="w-8 h-8" />
           )}
         </button>
       </div>
